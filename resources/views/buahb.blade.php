@@ -4,8 +4,15 @@
 <title></title>
 </head>
 <body>
-@foreach($buah as $data)
-{{$data}}<hr>
+<table border="1">
+<center>
+<h1>daftar :{{$data}}</h1>
+</center>
+
+<br>
+@foreach($kue as $datas)
+{{$datas}}<hr>
 @endforeach
+</table>
 </body>
 </html>

@@ -42,12 +42,14 @@ class MyController extends Controller
    $h   ="3";
    return view('seleksi',compact('f','g','h'));
 }
-  public function buah8($id)
+ public function latihan ($data)
     {
-    $id=['mangga','jeruk','apel','anggur','manggis'];
-    
-
-    return view('buahb',compact('id' ));
-}
+      $campuran= ['binatang' => ['gajah' , 'kucing' , 'marmut' , 'semut' , 'cacing'],
+                'buah' => ['mangga' , 'semangka' , 'duren' , 'manggis' , 'aple'],
+                'computer' => ['samsung' , 'asus' , 'lenovo' , 'axioo' , 'apple']];
+            
+      $kue = $campuran[$data];
+      return view ('buahb', compact('kue','data'));
+    }
 
      }
