@@ -37,4 +37,5 @@ Route::get('/test6','MyController@percobaan6');
 Route::get('/test7','MyController@percobaan7');
 
 Route::get('key/{data?}/{data2?}','MyController@latihan');
-
+Route::get('/coba','SiswaController@percobaan');
+Route::get('/tampilan','SiswaController@show');
