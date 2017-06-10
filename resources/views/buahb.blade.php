@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>parameter</title>
 </head>
 <body>
-<table border="1">
-<center>
-<h1>daftar :{{$data}}</h1>
-</center>
-
-<br>
-@foreach($kue as $datas)
-{{$datas}}<hr>
+</table>
+daftar : <b>{{$data}} {{$data2}}</b>
+@foreach($query as $key)
+<ul>
+<li>{{$key}}</li>
 @endforeach
+</ul>
 </table>
 </body>
 </html>

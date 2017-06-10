@@ -35,5 +35,6 @@ Route::get('/test4','MyController@percobaan4');
 Route::get('/test5','MyController@percobaan5');
 Route::get('/test6','MyController@percobaan6');
 Route::get('/test7','MyController@percobaan7');
-Route::get('/{data}/{data}','MyController@latihan');
+
+Route::get('key/{data?}/{data2?}','MyController@latihan');
 

@@ -42,14 +42,29 @@ class MyController extends Controller
    $h   ="3";
    return view('seleksi',compact('f','g','h'));
 }
- public function latihan ($data)
+ public function latihan ($data,$data2=null)
     {
-      $campuran= ['binatang' => ['gajah' , 'kucing' , 'marmut' , 'semut' , 'cacing'],
-                'buah' => ['mangga' , 'semangka' , 'duren' , 'manggis' , 'aple'],
-                'computer' => ['samsung' , 'asus' , 'lenovo' , 'axioo' , 'apple']];
-            
-      $kue = $campuran[$data];
-      return view ('buahb', compact('kue','data'));
+      $array= array ('binatang' => ['kucing'=>['persia','anggora'],
+                                 'hamster'=>['hamstaro','hamtaris'],
+                                 'kelinci'=>['anggora','persia']],
+
+                  'buah' => ['mangga'=>['haromanis','marijan'],
+                             'alpukat'=>['hijau','hitam'],
+                             'apel'=>['hijau','merah']],
+
+                  'leptop' =>['samsung'=>['254ur','29'],
+                              'asus'=>['4156','4165'],
+                              'acer'=>['630','7780']]
+                              );
+      if ($data){
+        $query=(array_keys($array[$data]));
+      }
+      if($data2){
+        $query=($array[$data][$data2]);
+      }
+      
+      return view ('buahb', compact('query','data','data2'));
     }
 
      }
+
